@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة OZM التعليمية | مستقبلك يبدأ من هنا</title>
+    <!-- خطوط جوجل (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #4f46e5; /* لون أساسي عصري */
+            --primary-hover: #4338ca;
+            --secondary: #10b981; /* لون التقييمات والمميزات */
+            --dark: #111827;
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-gray: #4b5563;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .btn-telegram {
+            background-color: #0088cc;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.3s;
+        }
+
+        .btn-telegram:hover {
+            background-color: #0077b5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            color: #d1d5db;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-box i {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box .number {
+            font-size: 1.8rem;
+            font-weight: 900;
+            display: block;
+        }
+
+        .text-yellow { color: #fbbf24; }
+        .text-blue { color: #60a5fa; }
+
+        /* Courses Grid */
+        .categories-section {
+            padding: 4rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            font-weight: 900;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--primary);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            background: #eef2ff;
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .course-count {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            color: var(--text-gray);
+        }
+
+        .features-list i {
+            color: var(--secondary);
+            margin-top: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        .diploma-details {
+            background: var(--light);
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            border-right: 3px solid var(--primary);
+        }
+
+        .action-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .action-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-social {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-social a {
+            color: #0088cc;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .stats { flex-direction: column; gap: 1rem; padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر مع شعار OZM المخصص -->
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="140" height="40">
+              <defs>
+                <linearGradient id="ozmGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4f46e5" />
+                  <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(2, 2)">
+                <path d="M22 3 L38 12 L38 28 L22 38 L6 28 L6 12 Z" fill="url(#ozmGradient)" opacity="0.12"/>
+                <polygon points="22,7 37,13 22,19 7,13" fill="url(#ozmGradient)" />
+                <polyline points="12,16 12,22 22,26 32,22 32,16" fill="none" stroke="url(#ozmGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30 15 L35 19 L35 23" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+              </g>
+              <text x="50" y="33" font-family="'Cairo', sans-serif" font-weight="900" font-size="24" fill="#111827" letter-spacing="1.5">OZM</text>
+              <circle cx="120" cy="29" r="3.5" fill="#10b981" />
+            </svg>
+        </div>
+        <a href="https://t.me/Ozm22" target="_blank" class="btn-telegram">
+            <i class="fa-brands fa-telegram"></i> تواصل معنا
+        </a>
+    </header>
+
+    <!-- القسم الرئيسي والإحصائيات -->
+    <section class="hero">
+        <h1>مرحباً بك في منصة OZM التعليمية</h1>
+        <p>وجهتك الأولى لتطوير مهاراتك في اللغات، التصميم، البرمجة، والذكاء الاصطناعي من خلال دورات ودبلومات متكاملة.</p>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <i class="fa-solid fa-star text-yellow"></i>
+                <span class="number">4.7</span>
+                <span>تقييم المنصة</span>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-users text-blue"></i>
+                <span class="number">+370,000</span>
+                <span>مستخدم ومستفيد</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأقسام التعليمية -->
+    <section class="categories-section">
+        <h2 class="section-title">مساراتنا التعليمية المتاحة</h2>
+        
+        <div class="grid">
+            
+            <!-- 1. اللغة الإنجليزية -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-wrapper"><i class="fa-solid fa-language"></i></div>
+                    <div>
+                        <h3 class="card-title">اللغة الإنجليزية</h3>
+                        <span class="course-count">12 دورة متكاملة</span>
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check-circle"></i> متوفر اختبار تحديد مستوى</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب استخراج شهادات معتمدة</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب شرح مباشر مع المعلم</li>
+                    <li><i class="fa-solid fa-check-circle"></i> شراء الكتب والمناهج (PDF)</li>
+                </ul>
+                <a href="https://t.me/Ozm22" target="_blank" class="action-btn">استفسر عن الدورة</a>
+            </div>
+
+            <!-- 2. جرافيكس ديزاين -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-wrapper"><i class="fa-solid fa-palette"></i></div>
+                    <div>
+                        <h3 class="card-title">جرافيكس ديزاين</h3>
+                        <span class="course-count">3 دبلومات احترافية</span>
+                    </div>
+                </div>
+                <div class="diploma-details">
+                    <strong>تفاصيل الدبلومات:</strong><br>
+                    - الدبلوم الأول: 3 دورات<br>
+                    - الدبلوم الثاني: 5 دورات<br>
+                    - الدبلوم الثالث: 4 دورات
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check-circle"></i> طلب استخراج شهادات معتمدة</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب شرح مباشر مع المعلم</li>
+                    <li><i class="fa-solid fa-check-circle"></i> شراء الكتب وملحقات التصميم (PDF)</li>
+                </ul>
+                <a href="https://t.me/Ozm22" target="_blank" class="action-btn">استفسر عن الدورة</a>
+            </div>
+
+            <!-- 3. الرخصة الدولية ICDL -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-wrapper"><i class="fa-solid fa-desktop"></i></div>
+                    <div>
+                        <h3 class="card-title">الرخصة الدولية (ICDL)</h3>
+                        <span class="course-count">8 دورات تدريبية</span>
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check-circle"></i> طلب استخراج شهادات معتمدة</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب شرح مباشر مع المعلم</li>
+                    <li><i class="fa-solid fa-check-circle"></i> شراء الكتب الخاصة بالحاسوب (PDF)</li>
+                </ul>
+                <a href="https://t.me/Ozm22" target="_blank" class="action-btn">استفسر عن الدورة</a>
+            </div>
+
+            <!-- 4. لغات البرمجة -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-wrapper"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <h3 class="card-title">لغات البرمجة</h3>
+                        <span class="course-count">3 دبلومات متقدمة</span>
+                    </div>
+                </div>
+                <div class="diploma-details">
+                    <strong>تفاصيل الدبلومات:</strong><br>
+                    - الدبلوم الأول: 3 دورات<br>
+                    - الدبلوم الثاني: 3 دورات<br>
+                    - الدبلوم الثالث: 3 دورات
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check-circle"></i> طلب استخراج شهادات معتمدة</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب شرح مباشر مع المعلم</li>
+                    <li><i class="fa-solid fa-check-circle"></i> شراء المراجع والكتب (PDF)</li>
+                </ul>
+                <a href="https://t.me/Ozm22" target="_blank" class="action-btn">استفسر عن الدورة</a>
+            </div>
+
+            <!-- 5. الذكاء الاصطناعي -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-wrapper"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <h3 class="card-title">الذكاء الاصطناعي</h3>
+                        <span class="course-count">6 دورات حديثة</span>
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check-circle"></i> شراء اشتراكات مواقع وتطبيقات الـ AI</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب استخراج شهادات معتمدة</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب شرح مباشر مع المعلم</li>
+                    <li><i class="fa-solid fa-check-circle"></i> شراء الكتب الإرشادية (PDF)</li>
+                </ul>
+                <a href="https://t.me/Ozm22" target="_blank" class="action-btn">استفسر عن الدورة</a>
+            </div>
+
+            <!-- 6. تصميم وإنشاء المواقع والتطبيقات -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-wrapper"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <div>
+                        <h3 class="card-title">تصميم المواقع والتطبيقات</h3>
+                        <span class="course-count">3 دورات تخصصية</span>
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check-circle"></i> طلب استخراج شهادات معتمدة</li>
+                    <li><i class="fa-solid fa-check-circle"></i> طلب شرح مباشر مع المعلم</li>
+                    <li><i class="fa-solid fa-check-circle"></i> شراء الكتب وملفات المشاريع (PDF)</li>
+                </ul>
+                <a href="https://t.me/Ozm22" target="_blank" class="action-btn">استفسر عن الدورة</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <h3>منصة OZM التعليمية</h3>
+        <p>طريقك الأسهل نحو الاحتراف وسوق العمل</p>
+        <div class="footer-social">
+            <a href="https://t.me/Ozm22" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+        <p style="color: #9ca3af; font-size: 0.9rem; margin-top: 1rem;">جميع الحقوق محفوظة &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
