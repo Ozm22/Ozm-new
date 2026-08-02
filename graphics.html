@@ -85,7 +85,6 @@
         }
         .telegram-cta:hover { background: #0077b5; }
 
-        /* عناوين الدبلومات الرئيسية */
         .diploma-title {
             background: var(--dark);
             color: white;
@@ -98,7 +97,6 @@
             gap: 0.8rem;
         }
 
-        /* القوائم المنسدلة للدورات */
         .course-dropdown {
             background: var(--white);
             border-radius: 12px;
@@ -110,7 +108,7 @@
         summary {
             padding: 1.2rem 1.5rem;
             font-weight: 700;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -133,12 +131,28 @@
             border-top: 1px solid #e5e7eb;
             background: #fafafa;
         }
+        
+        /* تنسيق أيام الدرس الواحد (من 1 إلى 20) */
+        .day-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+        .day-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
         .video-container {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%;
             height: 0;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             border-radius: 8px;
             overflow: hidden;
             background: #000;
@@ -171,7 +185,7 @@
         
         <div class="section-header">
             <h1>دبلومات جرافيكس ديزاين الاحترافية</h1>
-            <p style="color: #4b5563;">محتوى احترافي متكامل برعاية خبير التصميم <strong>Nour Design</strong> مقسم على 3 دبلومات و12 دورة تدريبية.</p>
+            <p style="color: #4b5563;">محتوى احترافي متكامل برعاية خبير التصميم <strong>Nour Design</strong>، مقسم على 3 دبلومات و12 دورة تدريبية (كل دورة تحتوي على 20 درساً بواقع 20 يوماً).</p>
             
             <div class="services-box">
                 <span class="service-badge"><i class="fa-solid fa-check"></i> استخراج شهادات معتمدة</span>
@@ -185,154 +199,78 @@
         </div>
 
 
-        <!-- ================= دبلوم 1 ================= -->
-        <div class="diploma-title">
-            <i class="fa-solid fa-graduation-cap" style="color: #60a5fa;"></i>
-            الدبلوم الأول: الأساسيات والبرامج التأسيسية (3 دورات)
-        </div>
+        <!-- ================= الدبلوم الأول (3 دورات) ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #60a5fa;"></i> الدبلوم الأول: الأساسيات والبرامج التأسيسية (3 دورات)</div>
 
         <!-- دورة 1 -->
         <details class="course-dropdown">
-            <summary>
-                <span><i class="fa-solid fa-book-open" style="color: var(--primary); margin-left: 8px;"></i> الدورة 1: أساسيات التصميم ونظريات الألوان (20 يوماً)</span>
-                <span style="font-size: 0.85rem; color: #6b7280;">Nour Design</span>
-            </summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">شرح شامل لمبادئ التكوين البصري وتناسق الألوان في التصميم التجاري.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/6EIKkW5H9p4" allowfullscreen></iframe>
-                </div>
+            <summary><span>الدورة 1: أساسيات التصميم ونظريات الألوان (20 درس)</span><span style="font-size: 0.85rem; color: var(--secondary);">مكتملة (20 يوم)</span></summary>
+            <div class="course-content" id="course1-days">
+                <!-- يتم توليد الـ 20 يوماً تلقائياً هنا -->
             </div>
         </details>
 
         <!-- دورة 2 -->
         <details class="course-dropdown">
-            <summary>
-                <span><i class="fa-solid fa-book-open" style="color: var(--primary); margin-left: 8px;"></i> الدورة 2: احتراف برنامج أدوبي فوتوشوب (20 يوماً)</span>
-                <span style="font-size: 0.85rem; color: #6b7280;">Nour Design</span>
-            </summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">التعامل مع الطبقات، التعديل على الصور، وتصميم الإعلانات والسوشيال ميديا.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                </div>
-            </div>
+            <summary><span>الدورة 2: احتراف برنامج أدوبي فوتوشوب (20 درس)</span><span style="font-size: 0.85rem; color: var(--secondary);">مكتملة (20 يوم)</span></summary>
+            <div class="course-content" id="course2-days"></div>
         </details>
 
         <!-- دورة 3 -->
         <details class="course-dropdown">
-            <summary>
-                <span><i class="fa-solid fa-book-open" style="color: var(--primary); margin-left: 8px;"></i> الدورة 3: أساسيات برنامج أدوبي إليستريتور (20 يوماً)</span>
-                <span style="font-size: 0.85rem; color: #6b7280;">Nour Design</span>
-            </summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">الرسم المتجهي (Vector)، وتصميم الشعارات والهويات البصرية.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                </div>
-            </div>
+            <summary><span>الدورة 3: أساسيات برنامج أدوبي إليستريتور (20 درس)</span><span style="font-size: 0.85rem; color: var(--secondary);">مكتملة (20 يوم)</span></summary>
+            <div class="course-content" id="course3-days"></div>
         </details>
 
 
-        <!-- ================= دبلوم 2 ================= -->
-        <div class="diploma-title">
-            <i class="fa-solid fa-graduation-cap" style="color: #34d399;"></i>
-            الدبلوم الثاني: التصميم المتقدم والهوية البصرية (5 دورات)
-        </div>
+        <!-- ================= الدبلوم الثاني (5 دورات) ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #34d399;"></i> الدبلوم الثاني: التصميم المتقدم والهوية البصرية (5 دورات)</div>
 
-        <!-- دورة 1 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 1: دمج الصور والتلاعب البصري المتقدم (Photoshop)</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">الدمج الاحترافي، الإضاءة والظلال، وصناعة الأعمال الفنية الرقمية.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
-
-        <!-- دورة 2 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 2: هندسة الشعارات والعلامات التجارية</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">طريقة ابتكار الأفكار وبناء شعار احترافي يعبر عن الشركة.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
-
-        <!-- دورة 3 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 3: تصميم المطبوعات والهويات المتكاملة</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">بطاقات العمل، الأوراق الرسمية، البروشورات، وتجهيزها للطباعة.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
-
-        <!-- دورة 4 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 4: تصميم واجهات المستخدم UI للمبتدئين</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">مبادئ تصميم المواقع والتطبيقات عبر أدوات الجرافيك الحديثة.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
-
-        <!-- دورة 5 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 5: الإلسيستريتور المتقدم للرسومات المتجهة</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">الرسم الحر (Vector Art) وتصميم الشخصيات الكرتونية.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
+        <details class="course-dropdown"><summary><span>الدورة 1: دمج الصور والتلاعب البصري (20 درس)</span></summary><div class="course-content" id="course4-days"></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 2: هندسة الشعارات والعلامات التجارية (20 درس)</span></summary><div class="course-content" id="course5-days"></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 3: تصميم المطبوعات والهويات المتكاملة (20 درس)</span></summary><div class="course-content" id="course6-days"></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 4: تصميم واجهات المستخدم UI (20 درس)</span></summary><div class="course-content" id="course7-days"></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 5: الإليستريتور المتقدم للرسومات (20 درس)</span></summary><div class="course-content" id="course8-days"></div></details>
 
 
-        <!-- ================= دبلوم 3 ================= -->
-        <div class="diploma-title">
-            <i class="fa-solid fa-graduation-cap" style="color: #f472b6;"></i>
-            الدبلوم الثالث: الاحتراف والتخصصات المتقدمة (4 دورات)
-        </div>
+        <!-- ================= الدبلوم الثالث (4 دورات) ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #f472b6;"></i> الدبلوم الثالث: الاحتراف والتخصصات المتقدمة (4 دورات)</div>
 
-        <!-- دورة 1 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 1: فن الموشن جرافيكس وتحريك وتصميم الإعلانات</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">تحريك التصاميم الثابتة وصناعة الفيديوهات الإعلانية المتحركة.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
-
-        <!-- دورة 2 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 2: الإخراج الفني وتصميم الإعلانات الطرقية (Billboard)</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">التعامل مع المقاسات الكبيرة جدًا وإعلانات الشوارع والمجلات.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
-
-        <!-- دورة 3 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 3: تجهيز البورتفوليو (معرض الأعمال) الاحترافي</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">كيف تعرض أعمالك بطريقة تجذب العملاء والشركات الكبرى.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
-
-        <!-- دورة 4 -->
-        <details class="course-dropdown">
-            <summary><span>الدورة 4: العمل الحر (Freelancing) وطرق جني الأرباح من الجرافيك</span></summary>
-            <div class="course-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">كيف تبدأ في منصات العمل الحر وتسويق خدماتك كـ مصمم محترف.</p>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
-            </div>
-        </details>
+        <details class="course-dropdown"><summary><span>الدورة 1: فن الموشن جرافيكس وتحريك الإعلانات (20 درس)</span></summary><div class="course-content" id="course9-days"></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 2: تصميم إعلانات الطرقية والبرنتات الكبرى (20 درس)</span></summary><div class="course-content" id="course10-days"></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 3: تجهيز البورتفوليو ومعرض الأعمال (20 درس)</span></summary><div class="course-content" id="course11-days"></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 4: العمل الحر وطرق جني الأرباح (20 درس)</span></summary><div class="course-content" id="course12-days"></div></details>
 
     </div>
 
     <footer>
         <p>منصة OZM التعليمية &copy; 2026 | بالتعاون مع محتوى Nour Design</p>
     </footer>
+
+    <!-- سكريبت ذكي لتوليد الـ 20 درساً تلقائياً لكل دورة لضمان خفة الموقع وسهولة التعديل -->
+    <script>
+        for (let c = 1; c <= 12; c++) {
+            let container = document.getElementById('course' + c + '-days');
+            if(container) {
+                let html = '';
+                for (let d = 1; d <= 20; d++) {
+                    html += `
+                        <div class="day-item">
+                            <div class="day-title">
+                                <span><i class="fa-solid fa-play-circle"></i> الدرس رقم ${d}: محتوى اليوم ${d} من الدورة</span>
+                                <span style="font-size: 0.8rem; color: #6b7280;">اليوم ${d} من 20</span>
+                            </div>
+                            <p style="font-size: 0.85rem; color: #4b5563;">شرح تفصيلي وتطبيقي عملي للدرس رقم ${d} ضمن خطة الـ 20 يوماً.</p>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    `;
+                }
+                container.innerHTML = html;
+            }
+        }
+    </script>
 
 </body>
 </html>
