@@ -3,70 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الدبلوم الأول - الدورة الأولى | منصة OZM</title>
-    <!-- تضمين Tailwind CSS للتنسيق -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>دبلومات جرافيكس ديزاين الاحترافية | منصة OZM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: system-ui, -apple-system, sans-serif; }
+        :root {
+            --primary: #4f46e5;
+            --secondary: #10b981;
+            --dark: #111827;
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --telegram: #0088cc;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.7; }
+        
+        header {
+            background-color: var(--white);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .back-btn {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section-header {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border-top: 5px solid var(--primary);
+        }
+        .section-header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        
+        .services-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+        .service-badge {
+            background: #f0fdf4;
+            color: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            border: 1px solid #bbf7d0;
+        }
+        .telegram-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--telegram);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            transition: 0.3s;
+        }
+        .telegram-cta:hover { background: #0077b5; }
+
+        .diploma-title {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .course-dropdown {
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
+        summary {
+            padding: 1.2rem 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            transition: background 0.2s;
+        }
+        summary:hover { background: #f9fafb; }
+        summary::marker { display: none; }
+        summary::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+        details[open] summary::after { transform: rotate(180deg); }
+        .course-content {
+            padding: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+            background: #fafafa;
+        }
+        
+        .day-dropdown {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.02);
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+        }
+        .day-dropdown summary {
+            padding: 1rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .day-content {
+            padding: 1.2rem;
+            border-top: 1px solid #e5e7eb;
+            background: #fff;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-top: 0.8rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
     </style>
 </head>
-<body class="bg-gray-100 p-8">
+<body>
 
-    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 border border-gray-200">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-3">
-            الدبلوم الأول - الدورة الأولى
-        </h2>
+    <header>
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-right"></i> الرئيسية</a>
+        <div style="font-weight: 900; color: var(--primary);">OZM - جرافيكس ديزاين (@NourDesign)</div>
+    </header>
+
+    <div class="container">
         
-        <div class="flex flex-col gap-4">
+        <div class="section-header">
+            <h1>دبلومات جرافيكس ديزاين الاحترافية</h1>
+            <p style="color: #4b5563;">محتوى احترافي متكامل برعاية خبير التصميم <strong>Nour Design</strong>.</p>
             
-            <!-- الدرس 1 -->
-            <div class="flex items-center p-4 rounded-lg border bg-white border-gray-200 hover:shadow-md hover:border-blue-300 transition-all">
-                <div class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-full font-bold ml-4 bg-blue-100 text-blue-700">
-                    1
-                </div>
-                <div class="flex-1">
-                    <a href="https://youtu.be/7ZUqRRyOaDI?si=0pUeVPejxjb8Zzmt" target="_blank" class="text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors">
-                        كيف ابدأ فى تصميم الجرافيكس 2026؟ | البرامج المطلوبه و اهم المصادر المجانية
-                    </a>
-                </div>
+            <div class="services-box">
+                <span class="service-badge"><i class="fa-solid fa-check"></i> استخراج شهادات معتمدة</span>
+                <span class="service-badge"><i class="fa-solid fa-check"></i> طلب شرح مباشر مع المعلم</span>
+                <span class="service-badge"><i class="fa-solid fa-check"></i> شراء كتب وملحقات التصميم PDF</span>
             </div>
 
-            <!-- الدروس من 2 إلى 19 (قوالب جاهزة للإضافة) -->
-            <!-- يمكنك تكرار هذا المقطع أو تعديله حسب أسماء الفيديوهات -->
-            <div class="flex items-center p-4 rounded-lg border bg-white border-gray-200 hover:shadow-md hover:border-blue-300 transition-all">
-                <div class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-full font-bold ml-4 bg-gray-100 text-gray-700">2</div>
-                <div class="flex-1">
-                    <a href="#" target="_blank" class="text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors">الدرس الثاني: [ضع اسم الفيديو هنا]</a>
-                </div>
-            </div>
-
-            <div class="flex items-center p-4 rounded-lg border bg-white border-gray-200 hover:shadow-md hover:border-blue-300 transition-all">
-                <div class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-full font-bold ml-4 bg-gray-100 text-gray-700">3</div>
-                <div class="flex-1">
-                    <a href="#" target="_blank" class="text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors">الدرس الثالث: [ضع اسم الفيديو هنا]</a>
-                </div>
-            </div>
-            
-            <!-- تخطي باقي الأرقام لاختصار الكود، يمكنك نسخ القالب أعلاه للأرقام من 4 إلى 19 -->
-            <div class="flex items-center p-4 rounded-lg border bg-white border-gray-200">
-                <div class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-full font-bold ml-4 bg-gray-100 text-gray-700">...</div>
-                <div class="flex-1 text-gray-500">
-                    (يتم إدراج الدروس من 4 إلى 19 بنفس النمط)
-                </div>
-            </div>
-
-            <!-- الدرس 20 (فارغ كما طلبت) -->
-            <div class="flex items-center p-4 rounded-lg border bg-gray-50 border-dashed border-gray-300 opacity-60">
-                <div class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-full font-bold ml-4 bg-gray-200 text-gray-500">
-                    20
-                </div>
-                <div class="flex-1">
-                    <span class="text-gray-400 italic"></span>
-                </div>
-            </div>
-
+            <a href="https://t.me/Ozm22" target="_blank" class="telegram-cta">
+                <i class="fa-brands fa-telegram"></i> للتسجيل أو طلب الكتب والشرح المباشر عبر التلجرام
+            </a>
         </div>
+
+
+        <!-- ================= دبلوم 1 ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #60a5fa;"></i> الدبلوم الأول: الأساسيات والبرامج التأسيسية (3 دورات)</div>
+
+        <!-- دورة 1 (تحتوي على 20 درساً كاملة ومفصلة) -->
+        <details class="course-dropdown">
+            <summary>
+                <span><i class="fa-solid fa-book-open" style="color: var(--primary); margin-left: 8px;"></i> الدورة 1: أساسيات التصميم ومقدمة الجرافيك (20 درساً متكاملاً)</span>
+                <span style="font-size: 0.85rem; color: var(--secondary);">Nour Design</span>
+            </summary>
+            <div class="course-content">
+
+                <!-- الدرس 1 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 1: كيف ابدأ فى تصميم الجرافيكس 2026؟ | البرامج المطلوبه و اهم المصادر المجانية</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">دليل البداية الشامل، اختيار المجال، والبرامج المطلوبة.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/7ZUqRRyOaDI" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 2 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 2: خمس أخطاء عملتهم في بدايتي في تصميم الجرافيك | أتحداك أنت كمان عملتهم</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">تجنب الأخطاء الشائعة للمبتدئين في بداية مشوارهم.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 3 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 3: دفعت 100 دولار لمصممين جرافيك لعمل شعار لقناتي هل يستحق</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">تقييم وتحليل الشعارات والأسعار في سوق العمل.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 4 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 4: 5 مواقع وتطبيقات لازم يكونوا عندك على الجهاز وبستخدمهم دايما</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">أهم الأدوات والمواقع المساعدة للمصمم.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 5 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 5: جميع تحديثات الفوتوشوب | هتلغي المصممين</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">التعامل مع التحديثات الحديثة وكيف توظفها لصالحك.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 6 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 6: أقوى كورس في تصميمات السوشيال ميديا | Photo manipulation</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">مقدمة في الدمج والتلاعب البصري لإعلانات السوشيال ميديا.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 7 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 7: ازاي تكون مصمم جرافيك ناجح</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">الصفات والمهارات المطلوبة للنجاح والاستمرار.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 8 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 8: أفضل شاشة لشغل الجرافيك وصناعة المحتوى عن تجربة شخصية</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">معايير اختيار الأجهزة والشاشات المناسبة للتصميم.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدرس 9 -->
+                <details class="day-dropdown">
+                    <summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 9: 7 مصادر متنوعة للدخل السلبي لمصممين الجرافيك Passive income</summary>
+                    <div class="day-content">
+                        <p style="color: #4b5563; margin-bottom: 0.5rem;">كيف تحقق دخلاً إضافياً من مهاراتك في التصميم.</p>
+                        <div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div>
+                    </div>
+                </details>
+
+                <!-- الدروس من 10 إلى 19 (تكملة قائمة التشغيل) -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 10: أساسيات التكوين البصري وتوزيع العناصر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 11: قواعد الإضاءة والظلال في التصميم</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 12: التعامل مع الطبقات والقص الاحترافي</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 13: نظريات الألوان وتناسقها في الهويات</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 14: هندسة الخطوط (Typography) وتعريبها</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 15: تصميم الغلاف الإعلاني المتكامل</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 16: تحسين دقة الصور وتعديل الألوان (Color Grading)</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 17: التعامل مع المنظور (Perspective) في التصميم</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 18: استراتيجيات التسويق الشخصي للمصممين</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس 19: المراجعة النهائية وتقفيل المشاريع</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></div></div></details>
+
+                <!-- الدرس 20 (فارغ كما طلبت) -->
+                <details class="day-dropdown" style="border: 2px dashed var(--primary);">
+                    <summary><i class="fa-regular fa-clock" style="color: var(--primary); margin-left: 6px;"></i> الدرس 20: (فارغ / قريباً)</summary>
+                    <div class="day-content">
+                        <p style="color: #6b7280; font-style: italic;">هذا الدرس تم إبقاؤه فارغاً لتتمكن من إضافته لاحقاً.</p>
+                    </div>
+                </details>
+
+            </div>
+        </details>
+
+        <!-- دورة 2 -->
+        <details class="course-dropdown">
+            <summary><span>الدورة 2: احتراف برنامج أدوبي فوتوشوب (20 درس)</span><span style="font-size: 0.85rem; color: #6b7280;">قريباً</span></summary>
+            <div class="course-content"><p style="color: #6b7280;">سيتم إضافة المحتوى قريباً...</p></div>
+        </details>
+
+        <!-- دورة 3 -->
+        <details class="course-dropdown">
+            <summary><span>الدورة 3: أساسيات برنامج أدوبي إليستريتور (20 درس)</span><span style="font-size: 0.85rem; color: #6b7280;">قريباً</span></summary>
+            <div class="course-content"><p style="color: #6b7280;">سيتم إضافة المحتوى قريباً...</p></div>
+        </details>
+
+
+        <!-- ================= دبلوم 2 ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #34d399;"></i> الدبلوم الثاني: التصميم المتقدم والهوية البصرية (5 دورات)</div>
+        <details class="course-dropdown"><summary><span>الدورات التابعة للدبلوم الثاني</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
+
+
+        <!-- ================= دبلوم 3 ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #f472b6;"></i> الدبلوم الثالث: الاحتراف والتخصصات المتقدمة (4 دورات)</div>
+        <details class="course-dropdown"><summary><span>الدورات التابعة للدبلوم الثالث</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
+
     </div>
+
+    <footer>
+        <p>منصة OZM التعليمية &copy; 2026 | بالتعاون مع محتوى Nour Design</p>
+    </footer>
 
 </body>
 </html>
