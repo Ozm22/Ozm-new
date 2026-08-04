@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قسم اللغة الإنجليزية (20 يوم لكل دورة) | منصة OZM</title>
+    <title>قسم اللغة الإنجليزية | منصة OZM</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,6 +14,7 @@
             --light: #f3f4f6;
             --white: #ffffff;
             --telegram: #0088cc;
+            --danger: #ef4444;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
         body { background-color: var(--light); color: var(--dark); line-height: 1.7; }
@@ -84,7 +85,19 @@
         }
         .telegram-cta:hover { background: #0077b5; }
 
-        .day-dropdown {
+        .diploma-title {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .course-dropdown {
             background: var(--white);
             border-radius: 12px;
             margin-bottom: 1rem;
@@ -113,17 +126,51 @@
             transition: transform 0.3s;
         }
         details[open] summary::after { transform: rotate(180deg); }
-        .day-content {
+        .course-content {
             padding: 1.5rem;
             border-top: 1px solid #e5e7eb;
             background: #fafafa;
+        }
+        
+        /* زر تنزيل الكتاب الخاص بكل دورة */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--danger);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            transition: 0.3s;
+            width: 100%;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2);
+        }
+        .download-btn:hover { background: #dc2626; }
+
+        .day-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+        .day-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
         }
         .video-container {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%;
             height: 0;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             border-radius: 8px;
             overflow: hidden;
             background: #000;
@@ -155,70 +202,133 @@
     <div class="container">
         
         <div class="section-header">
-            <h1>دبلوم اللغة الإنجليزية (نظام الـ 20 يوماً)</h1>
-            <p style="color: #4b5563;">كل دورة مجهزة بـ 20 درساً مرتبة بعناية بواقع درس واحد كل يوم لضمان أقصى استفادة.</p>
+            <h1>دبلومات اللغة الإنجليزية الشاملة</h1>
+            <p style="color: #4b5563;">3 دبلومات متدرجة، كل دبلوم يحتوي على 7 دورات، وكل دورة مزودة بكتاب PDF و20 درساً مصوراً.</p>
             
             <div class="services-box">
                 <span class="service-badge"><i class="fa-solid fa-check"></i> اختبار تحديد مستوى</span>
                 <span class="service-badge"><i class="fa-solid fa-check"></i> طلب شهادات معتمدة</span>
                 <span class="service-badge"><i class="fa-solid fa-check"></i> شرح مباشر مع المعلم</span>
-                <span class="service-badge"><i class="fa-solid fa-check"></i> كتب PDF</span>
             </div>
 
             <a href="https://t.me/Ozm22" target="_blank" class="telegram-cta">
-                <i class="fa-brands fa-telegram"></i> للتسجيل أو طلب الشرح المباشر والكتب عبر التلجرام
+                <i class="fa-brands fa-telegram"></i> للتسجيل أو طلب الشرح المباشر والشهادات عبر التلجرام
             </a>
         </div>
 
-        <h2 style="margin-bottom: 1.5rem; font-size: 1.4rem;">جدول الـ 20 يوماً للدورة:</h2>
+        <!-- ================= الدبلوم الأول (7 دورات) ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-language" style="color: #60a5fa;"></i> الدبلوم الأول: التأسيس والمبتدئين (7 دورات)</div>
 
-        <!-- اليوم الأول -->
-        <details class="day-dropdown">
-            <summary>
-                <span><i class="fa-regular fa-calendar-days" style="color: var(--primary); margin-left: 8px;"></i> اليوم الأول: أساسيات النطق والحروف الصوتية</span>
-                <span style="font-size: 0.85rem; color: #6b7280; font-weight: normal;">درس 1 من 20</span>
-            </summary>
-            <div class="day-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">في هذا الدرس سنتعرف على مقدمة شاملة لأهم قواعد النطق الصحيح.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                </div>
+        <details class="course-dropdown">
+            <summary><span>الدورة 1: أساسيات الحروف والنطق</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <div class="course-content">
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 1 (PDF)</a>
+                <div id="eng-course1-days"></div>
             </div>
         </details>
 
-        <!-- اليوم الثاني -->
-        <details class="day-dropdown">
-            <summary>
-                <span><i class="fa-regular fa-calendar-days" style="color: var(--primary); margin-left: 8px;"></i> اليوم الثاني: تكوين الجمل البسيطة</span>
-                <span style="font-size: 0.85rem; color: #6b7280; font-weight: normal;">درس 2 من 20</span>
-            </summary>
-            <div class="day-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">كيف تبني جملة مفردة ومتصلة بطريقة صحيحة وسهلة للمبتدئين.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                </div>
+        <details class="course-dropdown">
+            <summary><span>الدورة 2: بناء الجمل البسيطة والمفردات</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <div class="course-content">
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 2 (PDF)</a>
+                <div id="eng-course2-days"></div>
             </div>
         </details>
 
-        <!-- اليوم الثالث -->
-        <details class="day-dropdown">
-            <summary>
-                <span><i class="fa-regular fa-calendar-days" style="color: var(--primary); margin-left: 8px;"></i> اليوم الثالث: الضمائر وأفعال الكينونة (Verb To Be)</span>
-                <span style="font-size: 0.85rem; color: #6b7280; font-weight: normal;">درس 3 من 20</span>
-            </summary>
-            <div class="day-content">
-                <p style="color: #4b5563; margin-bottom: 0.5rem;">شرح مفصل لأهم الأفعال المساعدة وكيفية استخدامها في المحادثة.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                </div>
+        <details class="course-dropdown">
+            <summary><span>الدورة 3: قواعد اللغة الأساسية (Grammar 1)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <div class="course-content">
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 3 (PDF)</a>
+                <div id="eng-course3-days"></div>
             </div>
         </details>
+
+        <details class="course-dropdown">
+            <summary><span>الدورة 4: المحادثات اليومية التعارفية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <div class="course-content">
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 4 (PDF)</a>
+                <div id="eng-course4-days"></div>
+            </div>
+        </details>
+
+        <details class="course-dropdown">
+            <summary><span>الدورة 5: الاستماع والفهم المبدئي</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <div class="course-content">
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 5 (PDF)</a>
+                <div id="eng-course5-days"></div>
+            </div>
+        </details>
+
+        <details class="course-dropdown">
+            <summary><span>الدورة 6: القراءة الصحيحة والتدريب</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <div class="course-content">
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 6 (PDF)</a>
+                <div id="eng-course6-days"></div>
+            </div>
+        </details>
+
+        <details class="course-dropdown">
+            <summary><span>الدورة 7: الكتابة وتكوين الفقرات</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <div class="course-content">
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 7 (PDF)</a>
+                <div id="eng-course7-days"></div>
+            </div>
+        </details>
+
+
+        <!-- ================= الدبلوم الثاني (7 دورات) ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-comments" style="color: #34d399;"></i> الدبلوم الثاني: المستوى المتوسط والممارسة (7 دورات)</div>
+
+        <details class="course-dropdown"><summary><span>الدورة 1: قواعد اللغة المتوسطة (Grammar 2)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course8-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 2: المحادثة في الأماكن العامة</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course9-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 3: تطوير مهارة الاستماع (الأفلام والبودكاست)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course10-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 4: كتابة الرسائل والمقالات القصيرة</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course11-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 5: القراءة السريعة والتحليلية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course12-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 6: المصطلحات الشائعة (Idioms & Phrases)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course13-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 7: النقاشات الحرة والتعبير عن الرأي</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course14-days"></div></div></details>
+
+
+        <!-- ================= الدبلوم الثالث (7 دورات) ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-user-tie" style="color: #f472b6;"></i> الدبلوم الثالث: الاحتراف ولغة الأعمال (7 دورات)</div>
+
+        <details class="course-dropdown"><summary><span>الدورة 1: قواعد اللغة المتقدمة (Grammar 3)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course15-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 2: الإنجليزية للأعمال (Business English)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course16-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 3: كتابة السيرة الذاتية ورسائل التغطية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course17-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 4: اجتياز المقابلات الشخصية باللغة الإنجليزية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course18-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 5: مهارات العرض والتقديم (Presentations)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course19-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 6: التحضير لاختبارات التوفل والآيلتس</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course20-days"></div></div></details>
+        <details class="course-dropdown"><summary><span>الدورة 7: اللهجات والمحادثة مع الناطقين بها (Fluency)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course21-days"></div></div></details>
 
     </div>
 
     <footer>
         <p>منصة OZM التعليمية &copy; 2026</p>
     </footer>
+
+    <!-- سكريبت لتوليد الـ 20 درساً تلقائياً لكل دورة لضمان خفة الموقع -->
+    <script>
+        for (let c = 1; c <= 21; c++) {
+            let container = document.getElementById('eng-course' + c + '-days');
+            if(container) {
+                let html = '';
+                for (let d = 1; d <= 20; d++) {
+                    html += `
+                        <div class="day-item">
+                            <div class="day-title">
+                                <span><i class="fa-solid fa-play-circle"></i> الدرس رقم ${d}</span>
+                                <span style="font-size: 0.8rem; color: #6b7280;">اليوم ${d} من 20</span>
+                            </div>
+                            <p style="font-size: 0.85rem; color: #4b5563;">شرح مفصل ومبسط لمحتوى اليوم الـ ${d} من هذه الدورة.</p>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    `;
+                }
+                container.innerHTML = html;
+            }
+        }
+    </script>
 
 </body>
 </html>
