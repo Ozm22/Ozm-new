@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قسم اللغة الإنجليزية | منصة OZM</title>
+    <title>دبلومات اللغة الإنجليزية الشاملة | منصة OZM</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -132,7 +132,6 @@
             background: #fafafa;
         }
         
-        /* زر تنزيل الكتاب الخاص بكل دورة */
         .download-btn {
             display: inline-flex;
             align-items: center;
@@ -151,19 +150,23 @@
         }
         .download-btn:hover { background: #dc2626; }
 
-        .day-item {
+        .day-dropdown {
             background: white;
+            border-radius: 10px;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.02);
             border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            padding: 1rem;
+            overflow: hidden;
         }
-        .day-title {
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            display: flex;
-            justify-content: space-between;
+        .day-dropdown summary {
+            padding: 1rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .day-content {
+            padding: 1.2rem;
+            border-top: 1px solid #e5e7eb;
+            background: #fff;
         }
         .video-container {
             position: relative;
@@ -202,12 +205,12 @@
     <div class="container">
         
         <div class="section-header">
-            <h1>دبلومات اللغة الإنجليزية الشاملة</h1>
-            <p style="color: #4b5563;">3 دبلومات متدرجة، كل دبلوم يحتوي على 7 دورات، وكل دورة مزودة بكتاب PDF و20 درساً مصوراً.</p>
+            <h1>دبلومات اللغة الإنجليزية الاحترافية</h1>
+            <p style="color: #4b5563;">محتوى متكامل لتعلم اللغة الإنجليزية من الصفر حتى الاحتراف برعاية أكبر القنوات العالمية.</p>
             
             <div class="services-box">
                 <span class="service-badge"><i class="fa-solid fa-check"></i> اختبار تحديد مستوى</span>
-                <span class="service-badge"><i class="fa-solid fa-check"></i> طلب شهادات معتمدة</span>
+                <span class="service-badge"><i class="fa-solid fa-check"></i> استخراج شهادات معتمدة</span>
                 <span class="service-badge"><i class="fa-solid fa-check"></i> شرح مباشر مع المعلم</span>
             </div>
 
@@ -216,119 +219,106 @@
             </a>
         </div>
 
-        <!-- ================= الدبلوم الأول (7 دورات) ================= -->
-        <div class="diploma-title"><i class="fa-solid fa-language" style="color: #60a5fa;"></i> الدبلوم الأول: التأسيس والمبتدئين (7 دورات)</div>
+
+        <!-- ================= الدبلوم الأول ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #60a5fa;"></i> الدبلوم الأول: كورس اللغه الانجليزيه الشامل من الصفر الى الاحتراف (25 درس)</div>
 
         <details class="course-dropdown">
-            <summary><span>الدورة 1: أساسيات الحروف والنطق</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
+            <summary>
+                <span><i class="fa-solid fa-book-open" style="color: var(--primary); margin-left: 8px;"></i> محتوى الدبلوم الشامل (25 درساً)</span>
+                <span style="font-size: 0.85rem; color: var(--secondary);">مكتمل</span>
+            </summary>
             <div class="course-content">
-                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 1 (PDF)</a>
-                <div id="eng-course1-days"></div>
+                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدبلوم الأول (PDF)</a>
+
+                <!-- الدرس 1 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الأول: تعلم اللغة الإنجليزية من الصفر للمبتدئين</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/77IK9T45kiU" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 2 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثاني</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/AZZCsweJaiw" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 3 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثالث</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/S_deJPyvtfo" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 4 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الرابع</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/m8VUaW1b_z8" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 5 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الخامس</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/gBhK2m_CdQc" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 6 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس السادس</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/Th9S81mblxo" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 7 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس السابع</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/gZBAXCRrl_U" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 8 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثامن</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/63Riw1SEDPk" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 9 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس التاسع</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/pI3CrFMsduY" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 10 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس العاشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/q_bAo_n0pDU" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 11 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الحادي عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/HIz-rb0lMAY" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 12 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثاني عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/QQ66VKPsAag" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 13 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثالث عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/LBdAxKWOz1c" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 14 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الرابع عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/pqGg9MiP2ic" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 15 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الخامس عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/vLUn6_FMw3w" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 16 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس السادس عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/NDuK8lpN-mI" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 17 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس السابع عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/qQAgJxSSnbw" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 18 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثامن عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/l51hYjeR-K8" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 19 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس التاسع عشر</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/80tPPnffuMM" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 20 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس العشرون</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/86GViC7Hi44" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 21 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الواحد والعشرون</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/v4QDGr_18v4" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 22 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثاني والعشرون</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/HwKM7TBWHe0" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 23 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الثالث والعشرون</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/HF1XhS5Tsok" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 24 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الرابع والعشرون</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/nRA4y5Xe-eY" allowfullscreen></iframe></div></div></details>
+                <!-- الدرس 25 -->
+                <details class="day-dropdown"><summary><i class="fa-solid fa-play-circle" style="color: var(--primary); margin-left: 6px;"></i> الدرس الخامس والعشرون</summary><div class="day-content"><div class="video-container"><iframe src="https://www.youtube.com/embed/5VQJOtRNiFU" allowfullscreen></iframe></div></div></details>
+
             </div>
         </details>
 
-        <details class="course-dropdown">
-            <summary><span>الدورة 2: بناء الجمل البسيطة والمفردات</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
-            <div class="course-content">
-                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 2 (PDF)</a>
-                <div id="eng-course2-days"></div>
-            </div>
-        </details>
 
-        <details class="course-dropdown">
-            <summary><span>الدورة 3: قواعد اللغة الأساسية (Grammar 1)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
-            <div class="course-content">
-                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 3 (PDF)</a>
-                <div id="eng-course3-days"></div>
-            </div>
-        </details>
+        <!-- ================= أماكن الـ 9 دبلومات الإضافية ================= -->
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #34d399;"></i> الدبلوم الثاني: قواعد الإنجليزية المتقدمة</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم الثاني</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
-        <details class="course-dropdown">
-            <summary><span>الدورة 4: المحادثات اليومية التعارفية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
-            <div class="course-content">
-                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 4 (PDF)</a>
-                <div id="eng-course4-days"></div>
-            </div>
-        </details>
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #f472b6;"></i> الدبلوم الثالث: محادثات السفر والسياحة</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم الثالث</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
-        <details class="course-dropdown">
-            <summary><span>الدورة 5: الاستماع والفهم المبدئي</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
-            <div class="course-content">
-                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 5 (PDF)</a>
-                <div id="eng-course5-days"></div>
-            </div>
-        </details>
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #60a5fa;"></i> الدبلوم الرابع: إنجليزية الأعمال (Business English)</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم الرابع</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
-        <details class="course-dropdown">
-            <summary><span>الدورة 6: القراءة الصحيحة والتدريب</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
-            <div class="course-content">
-                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 6 (PDF)</a>
-                <div id="eng-course6-days"></div>
-            </div>
-        </details>
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #34d399;"></i> الدبلوم الخامس: الصوتيات والنطق الصحيح (Pronunciation)</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم الخامس</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
-        <details class="course-dropdown">
-            <summary><span>الدورة 7: الكتابة وتكوين الفقرات</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary>
-            <div class="course-content">
-                <a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة 7 (PDF)</a>
-                <div id="eng-course7-days"></div>
-            </div>
-        </details>
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #f472b6;"></i> الدبلوم السادس: التحضير لاختبار الآيلتس (IELTS)</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم السادس</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #60a5fa;"></i> الدبلوم السابع: التحضير لاختبار التوففل (TOEFL)</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم السابع</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
-        <!-- ================= الدبلوم الثاني (7 دورات) ================= -->
-        <div class="diploma-title"><i class="fa-solid fa-comments" style="color: #34d399;"></i> الدبلوم الثاني: المستوى المتوسط والممارسة (7 دورات)</div>
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #34d399;"></i> الدبلوم الثامن: إنجليزية المستشفيات والطب</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم الثامن</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
-        <details class="course-dropdown"><summary><span>الدورة 1: قواعد اللغة المتوسطة (Grammar 2)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course8-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 2: المحادثة في الأماكن العامة</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course9-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 3: تطوير مهارة الاستماع (الأفلام والبودكاست)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course10-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 4: كتابة الرسائل والمقالات القصيرة</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course11-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 5: القراءة السريعة والتحليلية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course12-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 6: المصطلحات الشائعة (Idioms & Phrases)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course13-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 7: النقاشات الحرة والتعبير عن الرأي</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course14-days"></div></div></details>
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #f472b6;"></i> الدبلوم التاسع: المصطلحات والعبارات الشائعة (Idioms)</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم التاسع</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
-
-        <!-- ================= الدبلوم الثالث (7 دورات) ================= -->
-        <div class="diploma-title"><i class="fa-solid fa-user-tie" style="color: #f472b6;"></i> الدبلوم الثالث: الاحتراف ولغة الأعمال (7 دورات)</div>
-
-        <details class="course-dropdown"><summary><span>الدورة 1: قواعد اللغة المتقدمة (Grammar 3)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course15-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 2: الإنجليزية للأعمال (Business English)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course16-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 3: كتابة السيرة الذاتية ورسائل التغطية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course17-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 4: اجتياز المقابلات الشخصية باللغة الإنجليزية</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course18-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 5: مهارات العرض والتقديم (Presentations)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course19-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 6: التحضير لاختبارات التوفل والآيلتس</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course20-days"></div></div></details>
-        <details class="course-dropdown"><summary><span>الدورة 7: اللهجات والمحادثة مع الناطقين بها (Fluency)</span><span style="font-size: 0.85rem; color: var(--secondary);">كتاب + 20 درس</span></summary><div class="course-content"><a href="#" class="download-btn"><i class="fa-solid fa-file-pdf"></i> تنزيل كتاب الدورة (PDF)</a><div id="eng-course21-days"></div></div></details>
+        <div class="diploma-title"><i class="fa-solid fa-graduation-cap" style="color: #60a5fa;"></i> الدبلوم العاشر: مهارات الاستماع والتحدث بطلاقة</div>
+        <details class="course-dropdown"><summary><span>محتوى الدبلوم العاشر</span></summary><div class="course-content"><p style="color: #6b7280;">قريباً...</p></div></details>
 
     </div>
 
     <footer>
         <p>منصة OZM التعليمية &copy; 2026</p>
     </footer>
-
-    <!-- سكريبت لتوليد الـ 20 درساً تلقائياً لكل دورة لضمان خفة الموقع -->
-    <script>
-        for (let c = 1; c <= 21; c++) {
-            let container = document.getElementById('eng-course' + c + '-days');
-            if(container) {
-                let html = '';
-                for (let d = 1; d <= 20; d++) {
-                    html += `
-                        <div class="day-item">
-                            <div class="day-title">
-                                <span><i class="fa-solid fa-play-circle"></i> الدرس رقم ${d}</span>
-                                <span style="font-size: 0.8rem; color: #6b7280;">اليوم ${d} من 20</span>
-                            </div>
-                            <p style="font-size: 0.85rem; color: #4b5563;">شرح مفصل ومبسط لمحتوى اليوم الـ ${d} من هذه الدورة.</p>
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    `;
-                }
-                container.innerHTML = html;
-            }
-        }
-    </script>
 
 </body>
 </html>
